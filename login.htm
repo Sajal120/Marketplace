@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+    Done By: Sajal Basnet
+    Student Id: 104170062
+
+    This HTML file represents the Login Page for an online platform. It includes a form for users to enter their email 
+    and password to log in. The page also provides a link to the registration page for new users and a button to return 
+    to the index page. The included JavaScript function 'submitLogin' handles the login process via an AJAX request.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="index-button-container">
+        <a href="index.htm" class="index-button">Go to Index Page</a>
+    </div>
+    
+    <div class="form-container">
+        <div id="error_message"></div>
+        <form id="loginForm" onsubmit="return submitLogin()" method="post">
+            <div>
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <p class="registration-prompt"><a href="register.htm">Register Here</a>.</p>
+    </div>
+    </form>
+    <!-- ... other HTML ... -->
+
+<!-- ... other HTML ... -->
+
+
+    <script>
+        function submitLogin() 
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "login.php", true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() 
+            {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (this.responseText === 'success') 
+                    {
+                        window.location.href = "listing.htm";
+                    } else {
+                        document.getElementById("error_message").innerHTML = this.responseText;
+                    }
+                }
+            };
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            xhr.send("ajax=true&email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password));
+            return false;
+        }
+    </script>
+</body>
+
+</html>

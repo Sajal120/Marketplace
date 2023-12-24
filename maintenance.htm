@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- 
+    Done By: Sajal Basnet
+    Student Id: 104170062
+
+    This HTML file serves as the interface for the Auction Management System. It provides navigation links and 
+    buttons for managing auction items, including processing auctions, generating reports, and deleting sold or 
+    failed items. The JavaScript functions for these actions are expected to be defined in the included 
+    'auctionManagement.js' file.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auction Management System</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <ul>
+        <li><a href="logout.php" class="logout-button">Logout</a></li>
+        <li><a href="listing.htm">Listing</a></li>
+        <li><a href="bidding.htm">Bidding</a></li>
+        <li><a href="maintenance.htm">Maintenance</a></li>
+    </ul>
+    <h1>Auction Management System</h1>
+    <button onclick="processAuctionItems()">Process Auction Items</button>
+    <button onclick="generateReport()">Generate Report</button>
+    <button onclick="deleteSoldAndFailedItems()">Delete Sold/Failed Items</button>
+    <div id="output"></div>
+
+    <script src="auctionManagement.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+<customer id="customer_656edb448d35d"><firstName>Sajal</firstName><surname>Basnet</surname><email>basnetsajal120@gmail.com</email><password>$2y$10$NBPmXU6RH23chkuFUAhuOuo0hcNyNpB90M7NRKXqlw9F9HGLmNDxC</password></customer><customer id="customer_656edb6798acd"><firstName>Sajal</firstName><surname>Basnet</surname><email>123@gmail.com</email><password>$2y$10$HD40qAKeFrZu8tlvU2vm1uS5vlEPj/jmNieg.6nSDeJOvnXrjp3W6</password></customer><customer id="customer_65701f15907d9"><firstName>asd</firstName><surname>asd</surname><email>asd@gmail.com</email><password>$2y$10$wMZJQB3wehsBnwp4fooiDuJcL5Ir7R9IBOVlKvXDRZC7KmbrkO4/G</password></customer></customers>
+<!-- More items can be added in this same format -->

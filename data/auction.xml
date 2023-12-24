@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auctions>
+<!-- 5 test items -->
+ <item>
+        <itemNumber>item_6571e610b72957.54118639</itemNumber>
+        <sellerCustomerId>customer_65701f15907d9</sellerCustomerId>
+        <itemName>Electronic Gadget</itemName>
+        <category>Electronics</category>
+        <description>Latest model electronic gadget with advanced features.</description>
+        <startPrice>50</startPrice>
+        <reservePrice>45</reservePrice>
+        <buyItNowPrice>80</buyItNowPrice>
+        <startDate>2023-12-07</startDate>
+        <startTime>16:34:40</startTime>
+        <status>in_progress</status>
+        <duration>
+            <days>1</days>
+            <hours>0</hours>
+            <minutes>0</minutes>
+        </duration>
+        <latestBid>
+            <bidPrice>55</bidPrice>
+            <bidderCustomerId>customer_65701f15907d8</bidderCustomerId>
+        </latestBid>
+    </item>
+    <item>
+        <itemNumber>item_657277d394ba83.84940571</itemNumber>
+        <sellerCustomerId>customer_65701f15907d9</sellerCustomerId>
+        <itemName>Smartphone X2</itemName>
+        <category>Electronics</category>
+        <description>Brand new Smartphone X2 with high-resolution camera.</description>
+        <startPrice>200</startPrice>
+        <reservePrice>180</reservePrice>
+        <buyItNowPrice>300</buyItNowPrice>
+        <startDate>2023-12-08</startDate>
+        <startTime>02:56:35</startTime>
+        <status>ended</status>
+        <duration>
+            <days>0</days>
+            <hours>2</hours>
+            <minutes>15</minutes>
+        </duration>
+    </item>
+     <item>
+        <itemNumber>item_6571e610b72957.54118639</itemNumber>
+        <sellerCustomerId>customer_65701f15907d9</sellerCustomerId>
+        <itemName>TV</itemName>
+        <category>Electronics</category>
+        <description>Latest model tv with advanced features.</description>
+        <startPrice>50</startPrice>
+        <reservePrice>45</reservePrice>
+        <buyItNowPrice>80</buyItNowPrice>
+        <startDate>2023-12-07</startDate>
+        <startTime>16:34:40</startTime>
+        <status>in_progress</status>
+        <duration>
+            <days>1</days>
+            <hours>0</hours>
+            <minutes>0</minutes>
+        </duration>
+        <latestBid>
+            <bidPrice>55</bidPrice>
+            <bidderCustomerId>customer_65701f15907d8</bidderCustomerId>
+        </latestBid>
+    </item>
+    <item>
+        <itemNumber>item_657277d394ba83.84940571</itemNumber>
+        <sellerCustomerId>customer_65701f15907d9</sellerCustomerId>
+        <itemName>Camera</itemName>
+        <category>Electronics</category>
+        <description>Brand new Smartphone X2 with high-resolution camera.</description>
+        <startPrice>200</startPrice>
+        <reservePrice>180</reservePrice>
+        <buyItNowPrice>300</buyItNowPrice>
+        <startDate>2023-12-08</startDate>
+        <startTime>02:56:35</startTime>
+        <status>ended</status>
+        <duration>
+            <days>0</days>
+            <hours>2</hours>
+            <minutes>15</minutes>
+        </duration>
+    </item>
+    <item>
+        <itemNumber>item_657277d394ba83.84940571</itemNumber>
+        <sellerCustomerId>customer_65701f15907d9</sellerCustomerId>
+        <itemName>Charger</itemName>
+        <category>Electronics</category>
+        <description>Brand new Smartphone X2 with high-resolution camera.</description>
+        <startPrice>200</startPrice>
+        <reservePrice>180</reservePrice>
+        <buyItNowPrice>300</buyItNowPrice>
+        <startDate>2023-12-08</startDate>
+        <startTime>02:56:35</startTime>
+        <status>ended</status>
+        <duration>
+            <days>0</days>
+            <hours>2</hours>
+            <minutes>15</minutes>
+        </duration>
+    </item>
+    
+    
+    <!-- More items can be added in this same format -->
+<item><itemNumber>item_6571e610b72957.54118639</itemNumber><sellerCustomerId>customer_65701f15907d9</sellerCustomerId><itemName>544</itemName><category>Electronics</category><description>assa</description><startPrice>8</startPrice><reservePrice>4</reservePrice><buyItNowPrice>5</buyItNowPrice><startDate>2023-12-07</startDate><startTime>16:34:40</startTime><status>in_progress</status><duration><days>1</days><hours>0</hours><minutes>0</minutes></duration><latestBid><bidPrice>9</bidPrice><bidderCustomerId>customer_65701f15907d9</bidderCustomerId></latestBid></item><item><itemNumber>item_657277d394ba83.84940571</itemNumber><sellerCustomerId>customer_65701f15907d9</sellerCustomerId><itemName>sad</itemName><category>Electronics</category><description>sad</description><startPrice>1</startPrice><reservePrice>2</reservePrice><buyItNowPrice>3</buyItNowPrice><startDate>2023-12-08</startDate><startTime>02:56:35</startTime><status>ended</status><duration><days>0</days><hours>2</hours><minutes>15</minutes></duration></item></auctions>

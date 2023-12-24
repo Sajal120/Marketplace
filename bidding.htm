@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+    Done By: Sajal Basnet
+    Student Id: 104170062
+
+    This HTML file serves as the Bidding Page for an online auction system. It includes links to other sections of the site 
+    such as Listing, Bidding, and Maintenance pages. The page uses CSS for styling and includes several JavaScript files: 
+    one for session checking (checkSession.js), one for handling the bidding logic (bidding.php), and another for fetching 
+    items available for bidding (fetchItems.js). 
+-->
+<html>
+<head>
+<title>Bidding Page</title>
+<link rel="stylesheet" href="main.css">
+<script src="checkSession.js"></script>
+<script src="bidding.php"></script> <!-- Include the bidding.php file -->
+<script src="fetchItems.js"></script> <!-- Include your fetchItems.js file here -->
+</head>
+<body>
+    
+    <ul>
+        <li><a href="logout.php" class="logout-button">Logout</a></li>
+        <li> <a href="listing.htm">Listing</a></li>
+        <li><a href="bidding.htm">Bidding</a></li>
+        <li><a href="maintenance.htm">Maintenance</a></li>
+    </ul>
+    <div class="form-container"> <!-- Use the same container as the listing page -->
+        <h1>Items for Bid</h1>
+        <table id="itemsTable">
+            <!-- Table contents will be here -->
+        </table>
+    </div>
+  
+</body>
+</html>

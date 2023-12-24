@@ -1,0 +1,527 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Updated background color */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+/* Navigation */
+nav ul, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden; /* Clear floats */
+    width: 100%; /* Ensure the ul spans the full width */
+    display: flex; /* Use flexbox for equal spacing */
+    justify-content: space-around; /* Distribute space around menu items */
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li, ul li {
+    flex-grow: 1; /* Allow each item to grow to fill the space */
+    text-align: center; /* Center text in each item */
+}
+
+nav ul li a, ul li a {
+    display: block; /* Allow the color to fill the whole block for each link */
+    padding: 20px 0; /* Vertical padding only to ensure text is centered */
+    font-size: 1.5em; /* Increase font size */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover, ul li a:hover,
+nav ul li a:focus, ul li a:focus {
+    background-color: #555;
+    color: #fff;
+}
+
+nav ul li a.active, ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    min-height: calc(100% - 185px);
+}
+
+/* Animated Typing Effect */
+@keyframes typing {
+    0%, 100% { width: 100%; }
+    50% { width: 0; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+main p {
+    font-size: 2em;
+    color: #333;
+    border-right: .15em solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: typing 6s steps(40, end) infinite, blink-caret 1s step-end infinite;
+}
+
+/* Center Aligning Form Container with Gradient Background */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to ensure full page coverage */
+    background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+}
+
+/* Styling the form elements */
+form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    padding: 40px;
+    background: #ffffff; /* White background for the form */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Styling the submit button with gradient */
+form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    background: linear-gradient(45deg, #49a09d, #5f2c82); /* Gradient button */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: linear-gradient(45deg, #5f2c82, #49a09d); /* Invert gradient on hover */
+}
+
+/* Link for Registration */
+form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form p a {
+    color: #49a09d; /* Color that stands out */
+    text-decoration: none;
+    font-weight: bold; /* Make it bold */
+    transition: color 0.3s ease;
+}
+
+form p a:hover {
+    color: #5f2c82; /* Darker shade on hover */
+}
+
+/* Error Messages */
+#error_message {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center; /* Centering error message */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    form {
+        width: calc(100% - 20px);
+        margin-top: 0;
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 1em;
+    }
+
+    main p {
+        font-size: 1.5em;
+    }
+}
+/* Link for Registration */
+.registration-prompt {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2em; /* Larger font size for the prompt */
+}
+
+.registration-prompt a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #f8f9fa; /* Soft background color for the link */
+    border-radius: 20px; /* Rounded corners for the link */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.registration-prompt a:hover {
+    color: #0056b3;
+    background-color: #e2e6ea; /* Slightly darker background on hover */
+    text-decoration: underline; /* Underline to highlight the link on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Deeper shadow for lift effect */
+}
+
+#registration_response {
+    color: red; /* Make the text color red */
+    font-size: 1.5em; /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+    
+    border-radius: 5px; /* Round the corners of the border */
+    
+    width: calc(100% - 40px); /* Adjust width as per padding */
+     
+    text-align: center; /* Center the text */
+    
+    display: block; /* Ensure it takes its own line */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#registration_response:hover {
+    background-color: #ffcccc; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow for lift effect */
+}
+
+#error_message {
+    color: red; /* Make the text color red */
+    font-size: 1.5em; /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+    
+    border-radius: 5px; /* Round the corners of the border */
+    
+    width: calc(100% - 40px); /* Adjust width as per padding */
+     
+    text-align: center; /* Center the text */
+    
+    display: block; /* Ensure it takes its own line */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#error_message:hover {
+    background-color: #ffcccc; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow for lift effect */
+}
+
+#listingResponse {
+    color: red; /* Make the text color red */
+    font-size: 1.5em; /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+    
+    border-radius: 5px; /* Round the corners of the border */
+    
+    width: calc(100% - 40px); /* Adjust width as per padding */
+     
+    text-align: center; /* Center the text */
+    
+    display: block; /* Ensure it takes its own line */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#listingResponse:hover {
+    background-color: #ffcccc; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow for lift effect */
+}
+
+.index-button-container {
+    text-align: center; /* Center the button container */
+    margin-top: 30px; /* Space above the button */
+    margin-bottom: 30px; /* Space below the button to avoid sticking to the form */
+}
+
+.index-button {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 2px 200px; /* Padding inside the button */
+    font-size: 2em; /* Font size for the text inside the button */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* Text color */
+    background-color: #5f2c82; /* Match the gradient end color of the submit button */
+    border-radius: 25px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s ease-in-out; /* Transition for the hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border: none; /* Remove border */
+}
+
+.index-button:hover,
+.index-button:focus {
+    background-color: #49a09d; /* Match the gradient start color of the submit button for hover */
+    color: #fff; /* Keep the text color white when hovered/focused */
+    text-decoration: none; /* Ensuring the underline does not re-appear on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow for a "lifted" effect */
+}
+
+/* Enhanced Logout Button */
+.logout-button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 5px; /* Adjust as needed */
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb); /* Gradient effect */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none; /* No border for a modern look */
+    border-radius: 25px; /* Fully rounded corners */
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease;
+    cursor: pointer; /* Cursor pointer to indicate it's clickable */
+}
+
+.logout-button:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Larger shadow on hover for a "lifted" effect */
+    transform: translateY(-3px); /* Slight upward movement on hover */
+    background-image: linear-gradient(to right, #6a82fb, #fc5c7d); /* Change gradient direction */
+}
+
+#listingForm {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow to match the login form */
+    max-width: 400px; /* Max width to match the login form */
+    width: calc(100% - 80px); /* Width adjusted for padding */
+    margin: 20px auto; /* Center form on page */
+    padding: 40px; /* Padding to match the login form */
+    background: #ffffff; /* White background to match the login form */
+    border-radius: 8px; /* Rounded corners to match the login form */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for interaction */
+}
+
+#listingForm label {
+    display: block; /* Ensure the label is on its own line */
+    margin-bottom: 10px; /* Space below the label */
+    color: #333; /* Color to match the login form */
+    font-size: 1em; /* Font size to match the login form */
+}
+
+#listingForm input[type="text"],
+#listingForm input[type="number"],
+#listingForm textarea,
+#listingForm select {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Comfortable padding inside inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ddd; /* Subtle border color */
+    border-radius: 4px; /* Slightly rounded borders for the inputs */
+    font-size: 1em; /* Text size to match login form */
+}
+
+#listingForm input[type="button"],
+#listingForm input[type="reset"] {
+    width: calc(50% - 10px); /* Half-width buttons, accounting for margin */
+    padding: 10px; /* Padding to increase clickability */
+    margin: 5px 0; /* Margin for spacing around buttons */
+    border: none; /* Remove border for flat design */
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer; /* Cursor to indicate clickable elements */
+    font-size: 1em; /* Match text size to other form elements */
+    background: linear-gradient(45deg, #49a09d, #5f2c82); /* Gradient to match the login button */
+    color: white; /* Text color for contrast */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#listingForm input[type="button"]:hover,
+#listingForm input[type="reset"]:hover {
+    background: linear-gradient(45deg, #5f2c82, #49a09d); /* Inverted gradient on hover */
+}
+
+/* Table Base Styles */
+#itemsTable {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+/* Table Headers */
+#itemsTable thead th {
+    background-color: #4CAF50; /* Green background for headers */
+    color: white;
+    padding: 12px;
+}
+
+/* Table Rows and Cells */
+#itemsTable tr {
+    background-color: #fafafa; /* Light background for table rows */
+}
+
+#itemsTable td, 
+#itemsTable th {
+    padding: 12px;
+    border: 1px solid #ddd; /* Border for cells */
+}
+
+/* Hover Effect for Rows */
+#itemsTable tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Zebra Striping for Rows */
+#itemsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table Cell Borders and Text Alignment */
+#itemsTable th, 
+#itemsTable td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Table on Smaller Screens */
+@media screen and (max-width: 600px) {
+    #itemsTable thead {
+        display: none; /* Hide the header on small devices */
+    }
+
+    #itemsTable, 
+    #itemsTable tbody, 
+    #itemsTable tr, 
+    #itemsTable td {
+        display: block;
+        width: 100%;
+    }
+
+    #itemsTable tr {
+        margin-bottom: 15px;
+    }
+
+    #itemsTable td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    #itemsTable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Styling the table actions buttons */
+#itemsTable .action-button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#itemsTable .action-button:hover {
+    background: #0b7dda;
+}
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Add borders to each cell */
+    text-align: left;
+}
+
+th {
+    background-color: #007bff; /* A consistent header background color */
+    color: white;
+    font-size: 1.2em; /* Larger font-size for headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+/* Larger text for table content */
+td {
+    font-size: 1.1em;
+}
+
+/* Button Styling */
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+    background-color: #28a745; /* Green background for buttons */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}

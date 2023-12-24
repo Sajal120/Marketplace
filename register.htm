@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- 
+    Done By: Sajal Basnet
+    Student Id: 104170062
+
+    This HTML file serves as the Registration Page for users to create an account on the platform. 
+    It includes a form with fields for first name, surname, email, password, and confirm password. 
+    The page also provides a link to the login page for existing users. The included JavaScript function 'submitRegistration' 
+    handles the form submission process, sending data to 'register.php' and displaying the response.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="index-button-container">
+        <a href="index.htm" class="index-button">Go to Index Page</a>
+    </div>
+    <div id="registration_response"></div>
+    <div class="form-container"> <!-- Apply form-container class for styling -->
+        <form id="registerForm" onsubmit="return submitRegistration()" method="post">
+    <form id="registerForm" onsubmit="return submitRegistration()" method="post">
+        <div>
+            <label for="firstname">First name*</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div>
+            <label for="surname">Surname*</label>
+            <input type="text" id="surname" name="surname" required>
+        </div>
+        <div>
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="confirm_password">Confirm Password*</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+    <div class="registration-prompt"> <!-- Use registration-prompt class for the link -->
+        <a href="login.htm">Goto Login</a>
+    </div>
+    <script>
+        function submitRegistration() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "register.php", true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("registration_response").innerHTML = this.responseText;
+                }
+            };
+            var formData = new FormData(document.getElementById("registerForm"));
+            formData.append("ajax", true);
+            xhr.send(new URLSearchParams(formData).toString());
+            return false;
+        }
+    </script>
+</body>
+</html>

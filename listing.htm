@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- 
+    Done By: Sajal Basnet
+    Student Id: 104170062
+
+    This HTML file serves as the Listing Page for the ShopOnline platform. It allows users to list new items for auction.
+    The page includes a form for entering item details, such as name, category, description, prices, and auction duration.
+    JavaScript functions are used to handle the form submission and reset actions.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ShopOnline Listing Page</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="listingScripts.js"></script>
+</head>
+
+<body>
+    
+    <ul>
+        <li><a href="logout.php" class="logout-button">Logout</a></li>
+        <li> <a href="listing.htm">Listing</a></li>
+        <li><a href="bidding.htm">Bidding</a></li>
+        <li><a href="maintenance.htm">Maintenance</a></li>
+    </ul>
+    <!-- Logout button/link -->
+    <div class="form-container">
+    <h1>ShopOnline Listing Page</h1>
+    <form id="listingForm" onsubmit="submitListing(); return false;">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <!-- Categories will be populated here by the loadCategories function -->
+        </select><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="startPrice">Start Price(Aud):</label>
+        <input type="number" id="startPrice" name="startPrice" value="0" required><br>
+
+        <label for="reservePrice">Reserve Price(Aud):</label>
+        <input type="number" id="reservePrice" name="reservePrice" required><br>
+
+        <label for="buyItNowPrice">Buy It Now Price(Aud):</label>
+        <input type="number" id="buyItNowPrice" name="buyItNowPrice" required><br>
+
+        <label for="durationDay">Duration:</label>
+        <select id="durationDay" name="durationDay">
+            <!-- Populate with options for days -->
+            <option value="0">0 Day</option>
+            <option value="1">1 Day</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <!-- Add more options as needed -->
+        </select>
+        <select id="durationHour" name="durationHour">
+            <!-- Populate with options for hours -->
+            <option value="-1">0 mins</option>
+            <option value="0">1 Hour</option>
+            <option value="1">2 Hours</option>
+            <!-- Add more options as needed -->
+        </select>
+        <select id="durationMin" name="durationMin">
+            <!-- Populate with options for minutes -->
+            <option value="0">0 Min</option>
+            <option value="1">1 Min</option>
+            <option value="15">15 Min</option>
+            <option value="30">30 Min</option>
+            <option value="45">45 Min</option>
+        </select><br>
+
+        <input type="button" value="List Item" onclick="submitListing();">
+        <input type="reset" value="Reset" onclick="resetForm();">
+    </form>
+
+    <div id="listingResponse"></div>
+
+</div>
+</body>
+
+</html>
